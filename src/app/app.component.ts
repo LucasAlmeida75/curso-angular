@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { FirstComponentComponent } from './components/first-component/first-component.component';
+import { ParentDataComponent } from './components/parent-data/parent-data.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FirstComponentComponent],
+  imports: [FirstComponentComponent, ParentDataComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'curso-angular';
+  userName: string = 'Joaquim';
+  title: string = 'curso-angular';
+  userData: {email: string, role: string} = {
+    email: 'joaquim@gmail.com',
+    role: 'Admin'
+  };
 }
