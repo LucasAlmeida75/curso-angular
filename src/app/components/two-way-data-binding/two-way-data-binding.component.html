@@ -8,7 +8,7 @@
             placeholder="Digite o seu nome"
         />
     </form>
-    <div *ngIf="name !== ''">
-        <p>O nome é: {{ name }}</p>
-    </div>
+        @if(name !== '') {
+            <p>O nome é: {{ name }}</p>
+        }
 </div>
